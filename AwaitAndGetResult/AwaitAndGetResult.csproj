@@ -7,10 +7,11 @@
     <RepositoryUrl>https://github.com/piccaso/nuggets.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <Description>https://github.com/piccaso/nuggets/tree/master/AwaitAndGetResult</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nerdbank.GitVersioning" Version="2.1.17" PrivateAssets="all" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="2.1.23" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
