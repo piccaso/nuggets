@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwaitAndGetResult", "AwaitAndGetResult\AwaitAndGetResult.csproj", "{42026D96-DA1E-4FA5-9BEC-A84D82D2E1AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwaitAndGetResult", "AwaitAndGetResult\AwaitAndGetResult.csproj", "{42026D96-DA1E-4FA5-9BEC-A84D82D2E1AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDataReaderExtensions", "IDataReaderExtensions\IDataReaderExtensions.csproj", "{4C8CA42F-88A6-4DCB-A3CB-DB0F0DC6BFCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDataReaderExtensions", "IDataReaderExtensions\IDataReaderExtensions.csproj", "{4C8CA42F-88A6-4DCB-A3CB-DB0F0DC6BFCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flect", "Flect\Flect.csproj", "{340CDFDB-77FD-480C-996E-610763CE04F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flect.Test", "Flect.Test\Flect.Test.csproj", "{58D04F72-A31E-4CF5-9774-3E62A6AC6F90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{4C8CA42F-88A6-4DCB-A3CB-DB0F0DC6BFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C8CA42F-88A6-4DCB-A3CB-DB0F0DC6BFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C8CA42F-88A6-4DCB-A3CB-DB0F0DC6BFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340CDFDB-77FD-480C-996E-610763CE04F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340CDFDB-77FD-480C-996E-610763CE04F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340CDFDB-77FD-480C-996E-610763CE04F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340CDFDB-77FD-480C-996E-610763CE04F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D04F72-A31E-4CF5-9774-3E62A6AC6F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D04F72-A31E-4CF5-9774-3E62A6AC6F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D04F72-A31E-4CF5-9774-3E62A6AC6F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D04F72-A31E-4CF5-9774-3E62A6AC6F90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
