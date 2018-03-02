@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+#pragma warning disable 169
 
 namespace Flect.Test
 {
