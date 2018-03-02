@@ -6,7 +6,7 @@
     <PackageProjectUrl>https://github.com/piccaso/nuggets</PackageProjectUrl>
     <RepositoryUrl>https://github.com/piccaso/nuggets.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/piccaso/nuggets/blob/master/license.txt</PackageLicenseUrl>
     <Description>https://github.com/piccaso/nuggets/tree/master/AwaitAndGetResult</Description>
   </PropertyGroup>
 
