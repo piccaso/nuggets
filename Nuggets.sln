@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flect", "Flect\Flect.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flect.Test", "Flect.Test\Flect.Test.csproj", "{58D04F72-A31E-4CF5-9774-3E62A6AC6F90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryHarder", "TryHarder\TryHarder.csproj", "{11AE1F07-E4EA-40F4-BE64-F810E853F326}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryHarder", "TryHarder\TryHarder.csproj", "{11AE1F07-E4EA-40F4-BE64-F810E853F326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryHarder.Test", "TryHarder.Test\TryHarder.Test.csproj", "{908D7922-92A6-4223-9524-37E255A049A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryHarder.Test", "TryHarder.Test\TryHarder.Test.csproj", "{908D7922-92A6-4223-9524-37E255A049A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvHelper.Ext", "CsvHelper.Ext\CsvHelper.Ext.csproj", "{1C814D3C-69F9-4544-A33B-47D6233E6864}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvHelper.Ext.Test", "CsvHelper.Ext.Test\CsvHelper.Ext.Test.csproj", "{EF45B289-D696-496D-B252-6479F1776EC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{908D7922-92A6-4223-9524-37E255A049A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{908D7922-92A6-4223-9524-37E255A049A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{908D7922-92A6-4223-9524-37E255A049A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C814D3C-69F9-4544-A33B-47D6233E6864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C814D3C-69F9-4544-A33B-47D6233E6864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C814D3C-69F9-4544-A33B-47D6233E6864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C814D3C-69F9-4544-A33B-47D6233E6864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF45B289-D696-496D-B252-6479F1776EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF45B289-D696-496D-B252-6479F1776EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF45B289-D696-496D-B252-6479F1776EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF45B289-D696-496D-B252-6479F1776EC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
