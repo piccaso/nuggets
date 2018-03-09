@@ -12,8 +12,18 @@ namespace CsvHelper.Ext
         public static CsvConfig GetExcelAtDeConfig() => new CsvConfig
         {
             Delimiter = ";",
-            Encoding = Encoding.GetEncoding(1252),
+            Encoding = GetAnsiEncoding(),
         };
+
+        public static Encoding GetAnsiEncoding()
+        {
+#if NETSTD20
+            return CodePagesEncodingProvider.Instance.GetEncoding(1252);
+#endif
+#if NET45
+            return Encoding.GetEncoding(1252);
+#endif
+        }
 
         public static IList<T> ReadCsv<T>(string fileName, CsvConfig config = null)
         {

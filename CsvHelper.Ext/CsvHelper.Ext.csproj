@@ -8,6 +8,9 @@
     <RepositoryType>git</RepositoryType>
     <PackageLicenseUrl>https://github.com/piccaso/nuggets/blob/master/license.txt</PackageLicenseUrl>
     <Description></Description>
+
+    <DefineConstants Condition="'$(TargetFramework)' == 'netstandard2.0'">NETSTD20</DefineConstants>
+    <DefineConstants Condition="'$(TargetFramework)' == 'net45'">NET45</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
