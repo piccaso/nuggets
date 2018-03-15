@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using CsvConfig = CsvHelper.Configuration.Configuration;
+using IEnum = System.Collections.IEnumerable;
 
 namespace CsvHelper.Ext
 {
@@ -36,8 +37,8 @@ namespace CsvHelper.Ext
             }
         }
 
-        public static IList<T> ReadCsv<T>(string fileName, Func<IReaderRow, T> readFunc) => ReadCsv(fileName, GetExcelAtDeConfig(), readFunc);
-        public static IList<T> ReadCsv<T>(string fileName, CsvConfig config, Func<IReaderRow,T> readFunc)
+        public static IList<T> ReadCsv<T>(string fileName, Func<IReaderRow, T> readFunc) => ReadCsv(null, fileName, readFunc);
+        public static IList<T> ReadCsv<T>(this CsvConfig config, string fileName, Func<IReaderRow,T> readFunc)
         {
             config = config ?? GetExcelAtDeConfig();
             using (var fs = File.OpenRead(fileName))
@@ -60,7 +61,8 @@ namespace CsvHelper.Ext
             }
         }
 
-        public static void WriteCsvTo(this System.Collections.IEnumerable data, Stream stream, CsvConfig config = null)
+        public static void WriteCsvTo(this CsvConfig config, IEnum data, Stream stream) => WriteCsvTo(data, stream, config);
+        public static void WriteCsvTo(this IEnum data, Stream stream, CsvConfig config = null)
         {
             config = config ?? GetExcelAtDeConfig();
             using (var sw = new StreamWriter(stream, config.Encoding))
@@ -69,14 +71,15 @@ namespace CsvHelper.Ext
                 csvWriter.WriteRecords(data);
             }
         }
-        public static void WriteCsv(this System.Collections.IEnumerable data, string filename, CsvConfig config = null)
+        public static void WriteCsv(this CsvConfig config, IEnum data, string filename) => WriteCsv(data, filename, config);
+        public static void WriteCsv(this IEnum data, string filename, CsvConfig config = null)
         {
             using (var fs = File.OpenWrite(filename))
             {
                 data.WriteCsvTo(fs, config);
             }
         }
-        public static byte[] GetCsvBytes(this System.Collections.IEnumerable data, CsvConfig config = null)
+        public static byte[] GetCsvBytes(this IEnum data, CsvConfig config = null)
         {
             using (var ms = new MemoryStream())
             {
@@ -84,5 +87,7 @@ namespace CsvHelper.Ext
                 return ms.ToArray();
             }
         }
+
+        public static string RemoveControlChars(this string str) => new string(str.Where(c => !char.IsControl(c)).ToArray());
     }
 }
