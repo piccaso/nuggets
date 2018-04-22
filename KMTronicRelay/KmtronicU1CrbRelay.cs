@@ -29,7 +29,18 @@ namespace KMTronicRelay
 
         public static IKmtronicU1CrbRelay Create(SerialPort port) => new KmtronicU1CrbRelay(port);
 
-        /// <param name="port">"COM3" or "/dev/ttyS0"</param>
+        /// <example>
+        /// <code>
+        /// KmtronicU1CrbRelay.Use("COM3", relay =&gt;
+        /// {
+        ///     relay.Switch(SwitchNumber.One, SwitchAction.On);
+        ///     Thread.Sleep(500);
+        ///     relay.Switch(SwitchNumber.One, SwitchAction.Off);
+        ///     Thread.Sleep(500);
+        /// });
+        /// </code>
+        /// </example>
+        /// <param name="port">"COM3" or "/dev/ttyUSB0"</param>
         /// <param name="action"></param>
         public static void Use(string port, Action<IKmtronicU1CrbRelay> action)
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO.Ports;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -6,8 +7,16 @@ namespace KMTronicRelay.Cli
 {
     public class Program
     {
+        private static string _port = "COM3";
         static void Main(string[] args)
         {
+            Console.WriteLine($"Ports available:\n {string.Join("\n", SerialPort.GetPortNames())}");
+
+            if (args.Length > 0) _port = args[0];
+
+            Console.WriteLine($"Using Port: {_port}");
+            
+
             Delays.OffTime = 200;
             Delays.OnTime = 600;
 
@@ -72,7 +81,7 @@ namespace KMTronicRelay.Cli
         {
             Thread.CurrentThread.IsBackground = true;
 
-            KmtronicU1CrbRelay.Use("COM3", relay =>
+            KmtronicU1CrbRelay.Use(_port, relay =>
             {
                 while (!ct.IsCancellationRequested)
                 {
