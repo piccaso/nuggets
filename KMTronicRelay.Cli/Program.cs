@@ -59,27 +59,13 @@ namespace KMTronicRelay.Cli
                 }
                 else
                 {
-                    Sleep(100, cts.Token);
+                    cts.Token.WaitHandle.WaitOne(100);
                 }
                 
             }
             Console.WriteLine("shutting down...");
             bg.Join();
 
-        }
-
-        private static void Sleep(int msec, CancellationToken ct)
-        {
-            try
-            {
-                if (msec < 1 || ct.IsCancellationRequested) return;
-                if (msec > 10000) msec = 10000;
-                Task.Delay(msec, ct).Wait(ct);
-            }
-            catch (OperationCanceledException)
-            {
-                // all right i get it
-            }
         }
 
         private static void Background(CancellationToken ct)
@@ -93,13 +79,13 @@ namespace KMTronicRelay.Cli
                     if (Delays.OnTime > 0)
                     {
                         relay.Switch(SwitchNumber.One, SwitchAction.On);
-                        Sleep(Delays.OnTime, ct);
+                        ct.WaitHandle.WaitOne(Delays.OnTime);
                     }
 
                     if (Delays.OffTime > 0)
                     {
                         relay.Switch(SwitchNumber.One, SwitchAction.Off);
-                        Sleep(Delays.OffTime, ct);
+                        ct.WaitHandle.WaitOne(Delays.OffTime);
                     }
                 }
             });
