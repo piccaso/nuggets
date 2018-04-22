@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "KMTronicRelay.Cli": {
+      "commandName": "Project"
+    }
+  }
+}
