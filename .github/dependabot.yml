@@ -1,0 +1,43 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Nerdbank.GitVersioning
+    versions:
+    - 3.3.37
+    - 3.4.190
+  - dependency-name: CsvHelper
+    versions:
+    - 21.3.0
+    - 22.1.0
+    - 23.0.0
+    - 24.0.1
+    - 25.0.0
+    - 26.0.0
+    - 26.1.0
+  - dependency-name: MSTest.TestAdapter
+    versions:
+    - 2.1.2
+    - 2.2.1
+    - 2.2.2
+  - dependency-name: MSTest.TestFramework
+    versions:
+    - 2.1.2
+    - 2.2.1
+    - 2.2.2
+  - dependency-name: Microsoft.NET.Test.Sdk
+    versions:
+    - 16.8.3
+    - 16.9.1
+  - dependency-name: NUnit
+    versions:
+    - 3.13.0
+    - 3.13.1
+  - dependency-name: System.IO.Ports
+    versions:
+    - 5.0.0
